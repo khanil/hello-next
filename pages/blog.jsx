@@ -3,7 +3,7 @@ import PostLink from '../components/blog/PostLink';
 import DefaultLayout from '../layouts/Default';
 
 const BlogHome = props => (
-  <DefaultLayout>
+  <DefaultLayout title="Blog / Batman TV Shows">
     <h1>Batman TV Shows</h1>
 
     <ul>

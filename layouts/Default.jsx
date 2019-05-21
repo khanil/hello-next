@@ -1,45 +1,52 @@
+import Head from 'next/head';
 import Header from '../components/Header';
 
-const DefaultLayout = ({ children }) => (
-  <div className="layout_default">
-    <Header />
-    {children}
+const DefaultLayout = ({ children, title = 'Next.js App' }) => (
+  <>
+    <Head>
+      <title key="title">{title}</title>
+    </Head>
 
-    <style jsx global>{`
-      * {
-        box-sizing: border-box;
-      }
+    <div className="layout_default">
+      <Header />
+      {children}
 
-      body {
-        margin: 0;
-      }
+      <style jsx global>{`
+        * {
+          box-sizing: border-box;
+        }
 
-      ul {
-        padding: 0;
-      }
+        body {
+          margin: 0;
+        }
 
-      li {
-        list-style: none;
-      }
+        ul {
+          padding: 0;
+        }
 
-      a {
-        text-decoration: none;
-        color: blue;
-      }
+        li {
+          list-style: none;
+        }
 
-      a:hover {
-        opacity: 0.6;
-      }
-    `}</style>
+        a {
+          text-decoration: none;
+          color: blue;
+        }
 
-    <style jsx>{`
-      .layout_default {
-        margin: 0 auto 15px;
-        padding: 0 25px;
-        max-width: 1280px;
-      }
-    `}</style>
-  </div>
+        a:hover {
+          opacity: 0.6;
+        }
+      `}</style>
+
+      <style jsx>{`
+        .layout_default {
+          margin: 0 auto 15px;
+          padding: 0 25px;
+          max-width: 1280px;
+        }
+      `}</style>
+    </div>
+  </>
 );
 
 export default DefaultLayout;

@@ -2,7 +2,7 @@ import fetch from 'isomorphic-unfetch';
 import DefaultLayout from '../layouts/Default';
 
 const BlogPost = ({ show }) => (
-  <DefaultLayout>
+  <DefaultLayout title={`Blog / ${show.name}`}>
     <h1>{show.name}</h1>
     <p>{show.summary.replace(/<[/]?p>/g, '')}</p>
     <img src={show.image.medium} />

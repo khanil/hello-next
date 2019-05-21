@@ -1,7 +1,7 @@
 import DefaultLayout from '../layouts/Default';
 
 const About = () => (
-  <DefaultLayout>
+  <DefaultLayout title="About">
     <h1>About</h1>
 
     <p>
