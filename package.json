@@ -7,11 +7,15 @@
     "dev": "node server.js",
     "build": "next build",
     "now-build": "next build",
+    "analyze": "BUNDLE_ANALYZE=both npm run build",
     "start": "next start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "@zeit/next-bundle-analyzer": "^0.1.2"
+  },
   "dependencies": {
     "express": "^4.17.0",
     "isomorphic-unfetch": "^3.0.0",
