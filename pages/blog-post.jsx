@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
+import DefaultLayout from '../layouts/Default';
 
 const BlogPost = ({ show }) => (
   <>
@@ -12,6 +13,8 @@ const BlogPost = ({ show }) => (
     <img src={show.image.medium} />
   </>
 );
+
+BlogPost.layoutComponent = DefaultLayout;
 
 BlogPost.getInitialProps = async function(context) {
   const { id } = context.query;

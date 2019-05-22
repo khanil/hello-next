@@ -1,3 +1,5 @@
+import DefaultLayout from '../layouts/Default';
+
 const Index = () => (
   <>
     <h1>Home</h1>
@@ -10,5 +12,7 @@ const Index = () => (
     </p>
   </>
 );
+
+Index.layoutComponent = DefaultLayout;
 
 export default Index;

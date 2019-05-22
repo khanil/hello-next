@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
+import DefaultLayout from '../layouts/Default';
 import PostLink from '../components/blog/PostLink';
 
 const BlogHome = props => (
@@ -17,6 +18,8 @@ const BlogHome = props => (
     </ul>
   </>
 );
+
+BlogHome.layoutComponent = DefaultLayout;
 
 BlogHome.defaultProps = {
   shows: [],

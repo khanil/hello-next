@@ -15,9 +15,13 @@ class CustomApp extends App {
 
     return (
       <Container>
-        <DefaultLayout>
+        {Component.layoutComponent ? (
+          <Component.layoutComponent>
+            <Component {...pageProps} />
+          </Component.layoutComponent>
+        ) : (
           <Component {...pageProps} />
-        </DefaultLayout>
+        )}
       </Container>
     );
   }

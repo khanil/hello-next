@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import DefaultLayout from '../layouts/Default';
 
 const About = () => (
   <>
@@ -17,5 +18,7 @@ const About = () => (
     </p>
   </>
 );
+
+About.layoutComponent = DefaultLayout;
 
 export default About;
