@@ -1,7 +1,11 @@
-import DefaultLayout from '../layouts/Default';
+import Head from 'next/head';
 
 const About = () => (
-  <DefaultLayout title="About">
+  <>
+    <Head>
+      <title key="title">About</title>
+    </Head>
+
     <h1>About</h1>
 
     <p>
@@ -11,7 +15,7 @@ const About = () => (
       fugiat facilis est rem laboriosam dolor, impedit inventore doloribus iure vero incidunt hic aliquam odit quia iste
       saepe enim architecto.
     </p>
-  </DefaultLayout>
+  </>
 );
 
 export default About;

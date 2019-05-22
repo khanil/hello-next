@@ -1,12 +1,16 @@
 import fetch from 'isomorphic-unfetch';
-import DefaultLayout from '../layouts/Default';
+import Head from 'next/head';
 
 const BlogPost = ({ show }) => (
-  <DefaultLayout title={`Blog / ${show.name}`}>
+  <>
+    <Head>
+      <title key="title">{`Blog / ${show.name}`}</title>
+    </Head>
+
     <h1>{show.name}</h1>
     <p>{show.summary.replace(/<[/]?p>/g, '')}</p>
     <img src={show.image.medium} />
-  </DefaultLayout>
+  </>
 );
 
 BlogPost.getInitialProps = async function(context) {

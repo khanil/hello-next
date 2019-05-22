@@ -1,7 +1,5 @@
-import DefaultLayout from '../layouts/Default';
-
 const Index = () => (
-  <DefaultLayout>
+  <>
     <h1>Home</h1>
 
     <p>
@@ -10,7 +8,7 @@ const Index = () => (
       itaque quisquam corporis cum obcaecati optio molestias, illo quaerat? Molestias provident eos aperiam enim ducimus
       nemo! Ex, suscipit.
     </p>
-  </DefaultLayout>
+  </>
 );
 
 export default Index;

@@ -1,9 +1,13 @@
 import fetch from 'isomorphic-unfetch';
+import Head from 'next/head';
 import PostLink from '../components/blog/PostLink';
-import DefaultLayout from '../layouts/Default';
 
 const BlogHome = props => (
-  <DefaultLayout title="Blog / Batman TV Shows">
+  <>
+    <Head>
+      <title key="title">Blog / Batman TV Shows</title>
+    </Head>
+
     <h1>Batman TV Shows</h1>
 
     <ul>
@@ -11,7 +15,7 @@ const BlogHome = props => (
         <PostLink show={show} key={show.id} />
       ))}
     </ul>
-  </DefaultLayout>
+  </>
 );
 
 BlogHome.defaultProps = {

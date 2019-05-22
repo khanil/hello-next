@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 
 const Header = () => (
@@ -16,6 +17,11 @@ const Header = () => (
       <li>
         <Link href="/blog">
           <a>Blog</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/boxes">
+          <a>Boxes</a>
         </Link>
       </li>
     </ul>
@@ -37,4 +43,4 @@ const Header = () => (
   </nav>
 );
 
-export default Header;
+export default React.memo(Header);
