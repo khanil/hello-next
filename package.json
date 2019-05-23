@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "node server.js",
     "analyze": "BUNDLE_ANALYZE=both npm run build",
+    "export": "npm run build && next export",
     "start": "NODE_ENV=production node server.js",
+    "serve-static": "npm run export && http-server ./out -p $PORT",
     "build": "next build",
     "now-build": "SERVERLESS=true next build"
   },
@@ -14,7 +16,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@zeit/next-bundle-analyzer": "^0.1.2"
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "http-server": "^0.11.1",
+    "next-compose-plugins": "^2.2.0"
   },
   "dependencies": {
     "express": "^4.17.0",
