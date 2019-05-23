@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "node server.js",
-    "build": "next build",
-    "now-build": "next build",
     "analyze": "BUNDLE_ANALYZE=both npm run build",
-    "start": "next start"
+    "start": "NODE_ENV=production node server.js",
+    "build": "next build",
+    "now-build": "SERVERLESS=true next build"
   },
   "keywords": [],
   "author": "",
