@@ -19,11 +19,6 @@ const Header = () => (
           <a>Blog</a>
         </Link>
       </li>
-      <li>
-        <Link href="/boxes">
-          <a>Boxes</a>
-        </Link>
-      </li>
     </ul>
 
     <style jsx>{`
